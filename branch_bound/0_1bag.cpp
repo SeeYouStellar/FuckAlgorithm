@@ -55,7 +55,7 @@ void AddHeapnode
     newp->lchild = lchild; 
     pq.push(newp);
 }
-int bound(int i, int cw, int cp)
+int lbound(int i, int cw, int cp)
 {
     int leftc = c - cw;
     int up = cp;
@@ -75,7 +75,7 @@ void maxprice()
 {
     priority_queue<HeapNode *, vector<HeapNode *>, cmp> pq;
     HeapNode* E = NULL;
-    int i = 0, cw = 0, cp = 0, up = bound(0, 0, 0);
+    int i = 0, cw = 0, cp = 0, up = lbound(0, 0, 0);
     bestp = 0;
     while(i < n){  //当搜索到子集树第i层的节点时代表找到最优解   （分支限界法目标找到一个最优解即可）
         int wt = cw + obj[i].w;  //获取左子树的重量（即选择i=0的物品后的重量）
@@ -84,7 +84,7 @@ void maxprice()
                 bestp = cp + obj[i].p;
             AddHeapnode(pq, E, up, wt, cp+obj[i].p, i+1, 1);  //左子节点的上界与父节点的上界一样。且还该节点在子集树中位于第i+1层
         }
-        up = bound(i+1, cw, cp);//这一层的右子节点的up要从下一层的物品开始算起  ，这里带入的当前重量是cw，而不是wt，代表这一层的物品没有选择
+        up = lbound(i+1, cw, cp);//这一层的右子节点的up要从下一层的物品开始算起  ，这里带入的当前重量是cw，而不是wt，代表这一层的物品没有选择
         if(up >= bestp)
             AddHeapnode(pq, E, up, cw, cp, i+1, 0);
         E = pq.top();  //从pq中取下一个扩展节点

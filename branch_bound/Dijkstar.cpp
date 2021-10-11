@@ -10,7 +10,7 @@ using namespace std;
 class Graph{
 public:
     int price[100][100];//邻接矩阵
-    int minprice[100]; //到每个点的最近路径长度 ，相当于每个点都有一个bestp。在剪枝时，比较每个点的最佳值与当前这条路径的长度
+    int dist[100]; //到每个点的最近路径长度 ，相当于每个点都有一个bestp。在剪枝时，比较每个点的最佳值与当前这条路径的长度
     int n;
     int done[100];  //到这个点的最短路径是否已经找到
     int parent[100]; //记录每个节点的父节点 ，可以不断更新
@@ -34,22 +34,22 @@ void AddNode
     newNode->price = price;
     pq.push(newNode);
 }
-void minprice(int src)
+void ShortPath(int src)
 {
     priority_queue<HeapNode*, vector<HeapNode*>, cmp> pq;
     HeapNode* E = new HeapNode();
     //init
     E->id = src;
     E->price = src;
-    G.minprice[src] = 0;
+    G.dist[src] = 0;
     G.done[src] = 1;
     int i = 1;
     while(i < G.n){
         for(int j=0;j<G.n;j++){  //扩展E节点
             if(G.price[E->id][j]!=-1 && E->id != j){ //剪枝条件1：两点之间不存在可达的路或扩展出的这个点就是正在扩展的节点
                 int wt = E->price + G.price[E->id][j];  //当前路径到j的长度
-                if(wt <= G.minprice[j]){  //分支限界的剪枝条件。扩展节点E到j点的路径长度 大于 当前全局最佳到j点路径长度，那么就不可能是最优解。因为从j点到后面点的路径两者都是一样的。
-                    G.minprice[j] = wt;
+                if(wt <= G.dist[j]){  //分支限界的剪枝条件。扩展节点E到j点的路径长度 大于 当前全局最佳到j点路径长度，那么就不可能是最优解。因为从j点到后面点的路径两者都是一样的。
+                    G.dist[j] = wt;
                     G.parent[j] = E->id;
                     AddNode(pq, wt, j);
                 }
@@ -71,7 +71,7 @@ void minprice(int src)
             cout<<path.back()<<"->";
             path.pop_back();
         }   
-        cout<<": "<<G.minprice[i]<<endl;
+        cout<<": "<<G.dist[i]<<endl;
     }
 }
 int main()
@@ -82,13 +82,13 @@ int main()
         for(int j=0;j<G.n;j++)
             cin>>G.price[i][j];
     }
-    memset(G.minprice, INT8_MAX, sizeof(int)*G.n);
+    memset(G.dist, INT8_MAX, sizeof(int)*G.n);
     memset(G.done, 0, sizeof(int)*G.n);
     memset(G.parent, -1, sizeof(int)*G.n);
-    minprice(0);
+    ShortPath(0);
 
     for(int i=0;i<G.n;i++)
-        cout<<G.minprice[i]<<" ";
+        cout<<G.dist[i]<<" ";
     system("pause");
 }   
 // 5
