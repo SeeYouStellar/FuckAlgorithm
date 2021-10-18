@@ -2,6 +2,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
+//全排列
 //不按字典序——交换法
 void FullPermute1(int n, int begin, vector<int>& arr)
 {

@@ -13,10 +13,8 @@ public:
 };
 void backtrack(bNode* & node, int index)
 {
-    if(index == n){
-        
+    if(index == n)
         return ;
-    }   
     int flag = 0;
     for(int i=0;i<n;i++){
         int j;
@@ -46,4 +44,5 @@ int main()
     node->lb = 0;
     node->lev = 0;
     backtrack(node, 0);
+    system("pause");
 }
