@@ -1,4 +1,5 @@
 //构造一棵树即可，每一层算每一层的price，每一层的price是一样的。先根遍历到达叶节点时，就在总销售额上加上这个叶节点（retailer）的销售额
+//子节点的属性需要父节点的属性来获取，则用DFS
 #include<bits/stdc++.h>
 using namespace std;
 int N, flag[100010];
