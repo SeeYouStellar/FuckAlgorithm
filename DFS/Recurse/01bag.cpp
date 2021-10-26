@@ -1,3 +1,11 @@
+/*
+ * @Author: xinyu Li
+ * @Date: 2021-10-18 09:45:19
+ * @LastEditTime: 2021-10-25 10:07:48
+ * @Description: 
+ * @FilePath: \helloworld\fuck\DFS\Recurse\01bag.cpp
+ * I am because you are
+ */
 #include<iostream>
 using namespace std;
 int arr[5] = {0, 0, 0, 0, 0};
@@ -10,17 +18,16 @@ int maxv = 0;
 void DFS(int sumw, int sumv, int index)
 {
     if(index == n){
-        if(maxv < sumv){
+        if(sumw <= T && maxv < sumv){
             maxv = sumv;
             memcpy(arr, a, 5*sizeof(int));
         }
         return ;
     }
-    if(sumw+w[index] <= T){
-        a[index] = 1;
-        DFS(sumw+w[index], sumv+v[index], index+1);
-        a[index] = 0;
-    }
+    if(sumw > T) return;
+    a[index] = 1;
+    DFS(sumw+w[index], sumv+v[index], index+1);
+    a[index] = 0;
     DFS(sumw, sumv, index+1);
 }
 int main()

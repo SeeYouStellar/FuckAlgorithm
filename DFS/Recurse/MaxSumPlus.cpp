@@ -1,3 +1,11 @@
+/*
+ * @Author: xinyu Li
+ * @Date: 2021-10-18 09:45:19
+ * @LastEditTime: 2021-10-25 10:02:17
+ * @Description: 
+ * @FilePath: \helloworld\fuck\DFS\Recurse\MaxSumPlus.cpp
+ * I am because you are
+ */
 //算法笔记p273
 
 //子集树
@@ -21,8 +29,8 @@ vector<int> choice;
 int bestc = 0; //全局最优乘积
 void backtrack(int i, int cc, int cal, int n)
 {
-    if(n == N && cc == X){
-        if(cal > bestc){
+    if(n == N){
+        if(cc == X && cal > bestc){
             bestc = cal;
             choice = out;
         }

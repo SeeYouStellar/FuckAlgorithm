@@ -1,3 +1,11 @@
+/*
+ * @Author: xinyu Li
+ * @Date: 2021-10-18 09:45:19
+ * @LastEditTime: 2021-10-25 10:53:08
+ * @Description: 
+ * @FilePath: \helloworld\fuck\DFS\Recurse\Permute2.cpp
+ * I am because you are
+ */
 //按字典序排列
 //全排列
 
@@ -30,22 +38,4 @@ int main() {
 		combine(0, n);
 	return 0;
 }
-// #include<bits/stdc++.h>
-// using namespace std;
-// int a[10]={1,2,3,4,5,6,7,8,9,10};
-// int main(){
-//     int n;
-//     scanf("%d",&n);
-//     do{
-//         for(int i = 0;i<n;i++){
-//             if(i<n-1)
-//             printf("%d ",a[i]);
-//             else
-//             printf("%d",a[i]);
-//         }
-// 		printf("\n");
-//     }while(next_permutation(a,a+n));
-//     system("pause");
-//     return 0;
-// }
 

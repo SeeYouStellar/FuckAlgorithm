@@ -1,3 +1,11 @@
+/*
+ * @Author: xinyu Li
+ * @Date: 2021-10-08 22:50:36
+ * @LastEditTime: 2021-10-26 12:16:12
+ * @Description: 
+ * @FilePath: \helloworld\fuck\branch_bound\Dijkstar.cpp
+ * I am because you are
+ */
 //单源多目的最短路径问题：找到到每个点的最短路径
 //Dijkstra算法是解单源最短路径的一种算法：它主要贪心为核心思想
 //在Dijkstra的基础上增加分支限界的方法
@@ -15,6 +23,7 @@ public:
     int done[100];  //到这个点的最短路径是否已经找到
     int parent[100]; //记录每个节点的父节点 ，可以不断更新
 };
+
 class HeapNode{
 public:
     //HeapNode* parent;  可能有多个id相同的HeapNode，所以用HeapNode记录父节点不正确

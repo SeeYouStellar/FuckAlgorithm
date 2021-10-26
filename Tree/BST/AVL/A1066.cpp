@@ -1,11 +1,12 @@
 /*
  * @Author: xinyu Li
  * @Date: 2021-10-24 16:00:52
- * @LastEditTime: 2021-10-24 22:26:37
+ * @LastEditTime: 2021-10-25 09:28:45
  * @Description: AVL树
  * @FilePath: \helloworld\fuck\Tree\BST\AVL\A1066.cpp
  * I am because you are
  */
+// 在函数体内将要改变指针的指向时，传入的指针参数必须是引用，因为
 #include<iostream>
 using namespace std;
 int N, arr[20] = {0};

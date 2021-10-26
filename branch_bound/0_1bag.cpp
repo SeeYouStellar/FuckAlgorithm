@@ -14,13 +14,14 @@
 #include<queue>
 #include<algorithm>
 using namespace std;
+int path[10000], n, c, bestp;
 class Object{
 public:
     int w;
     int p;
     int id;
     double per;  //单位价格
-};
+}obj[10000];
 class HeapNode{
 public:
     HeapNode* parent;
@@ -30,9 +31,6 @@ public:
     int level;
     int lchild;//是否是父节点的左子节点
 };
-Object obj[10000];
-int path[10000];
-int n, c, bestp;
 struct cmp{
     bool operator()(HeapNode* &a, HeapNode* &b)  //降序
     {
@@ -68,18 +66,17 @@ int lbound(int i, int cw, int cp)
         up -=obj[i-1].p;
         up += (obj[i-1].w+leftc)*obj[i-1].per;
     }
-        
     return up;
 }
 void maxprice()
 {
     priority_queue<HeapNode *, vector<HeapNode *>, cmp> pq;
-    HeapNode* E = NULL;
+    HeapNode* E = NULL;  //根节点指向NULL
     int i = 0, cw = 0, cp = 0, up = lbound(0, 0, 0);
     bestp = 0;
     while(i < n){  //当搜索到子集树第i层的节点时代表找到最优解   （分支限界法目标找到一个最优解即可）
         int wt = cw + obj[i].w;  //获取左子树的重量（即选择i=0的物品后的重量）
-        if(wt <= c){   
+        if(wt <= c){
             if(bestp < cp + obj[i].p)
                 bestp = cp + obj[i].p;
             AddHeapnode(pq, E, up, wt, cp+obj[i].p, i+1, 1);  //左子节点的上界与父节点的上界一样。且还该节点在子集树中位于第i+1层
