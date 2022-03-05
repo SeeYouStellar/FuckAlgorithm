@@ -1,3 +1,11 @@
+/*
+ * @Author: xinyu Li
+ * @Date: 2021-10-18 15:56:20
+ * @LastEditTime: 2022-02-15 12:21:46
+ * @Description: 
+ * @FilePath: \helloworld\fuck\Tree\A1053.cpp
+ * I am because you are
+ */
 //要按照路径的字典序排列输出  
 //路径：DFS
 //树：静态数组
@@ -5,62 +13,54 @@
 //对序列的排序输出思路不一定是用优先队列存储序列，可以是sort函数，对序列进行排序输出，写法与优先队列类似，可以自己定义比较函数（不用写struct来重载，只需要写一个cmp函数）
 #include<bits/stdc++.h>
 using namespace std;
-int N, M, S, sum = 0, W, ROOT, Count[100];
-
-vector<int> tmp;
-
-struct node{
-    int w;
+struct Node{
+    int weight;
     vector<int> child;
-    
-}Node[100];
-void DFS(int root){   //树的先根遍历就是深度优先搜索
-    int size = Node[root].child.size();
-    if(sum == S && !size){
-        if(root == ROOT) {cout<<W<<endl;return;}
-        cout<<W<<" ";
-        for(int i=0;i<tmp.size();i++){
-            cout<<Node[tmp[i]].w;
-            if(i < tmp.size()-1) cout<<" ";
-        }
-        cout<<endl;
-        return;
+}tree[110];
+int N, M, S;
+vector<int> tmp;
+vector<vector<int>> ans;
+void dfs(int root, int sum)
+{
+    if(!tree[root].child.size() && sum == S){
+        ans.push_back(tmp);
     }
-    if(sum > S) return;  //树的先根遍历不需要设置遍历到叶节点这个递归边界，因为遍历叶节点后，不会进入for循环，不会无边界的递归下去。
-    for(int i=0;i<size;i++){
-        tmp.push_back(Node[root].child[i]);
-        sum += Node[Node[root].child[i]].w;
-        DFS(Node[root].child[i]);
-        sum -= Node[Node[root].child[i]].w;
+    for(int i=0; i<tree[root].child.size();i++){
+        tmp.push_back(tree[tree[root].child[i]].weight);
+        dfs(tree[root].child[i], sum+tree[tree[root].child[i]].weight);
         tmp.pop_back();
-    }  
+    }
 }
-int Root(){
-    for(int i=0;i<M;i++)
-        if(Count[i] == 0) return i;
-}
-bool cmp(int a, int b){
-    return Node[a].w > Node[b].w;
+bool cmp(int a, int b)
+{
+    
+    return tree[a].weight > tree[b].weight;
 }
 int main()
 {
     cin>>N>>M>>S;
-    int w, id, c;
-    for(int i=0;i<N;i++)
-        cin>>Node[i].w;
-    for(int i=0;i<M;i++){
-        cin>>id>>c; //id和儿子数量
-        int a;
-        for(int j=0;j<c;j++) {cin>>a;Node[id].child.push_back(a);Count[a]++;}
-        sort(Node[id].child.begin(), Node[id].child.end(), cmp);
+    for(int i=0; i<N; i++)
+        cin>>tree[i].weight;
+    int id, k, a;
+    for(int i=0; i<M; i++){
+        cin>>id>>k;
+        for(int j=0;j<k;j++){
+            cin>>a;
+            tree[id].child.push_back(a);
+        }
+        sort(tree[id].child.begin(), tree[id].child.end(), cmp);
     }
-
-    ROOT = Root();
-    sum += Node[ROOT].w;
-    W = sum;
-    DFS(ROOT);
+    dfs(0, tree[0].weight);
+    if(S >= tree[0].weight){
+        for(int i=0;i<ans.size();i++){
+            cout<<tree[0].weight;
+            for(int j=0;j<ans[i].size();j++)
+                cout<<" "<<ans[i][j];
+            cout<<endl;
+        }
+    }
+    
     system("pause");
-    return 0;
 }
 /*
 20 9 24

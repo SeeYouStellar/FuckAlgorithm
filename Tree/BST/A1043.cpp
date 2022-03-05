@@ -20,8 +20,8 @@ struct node{
 // void deleteNode(node* root, int data)
 // {
     
-// }
-void insertNode(node* &root, int x)
+// }                                      //至于为什么要用引用，因为这里形参有赋值操作，直接改变了形参的值（指针指向的地方）
+void insertNode(node* &root, int x)       //传递的必须是指针，因为函数运行时，形参都是重现产生副本，而不是实参本身，故如果是结构体本身，那么函数内对结构体的修改不会反映到实参上，注意这里是修改结构体不是修改指向结构体的指针
 {
     if(root == NULL) {root = new node();root->data = x;return;}
     else if(root->data > x)insertNode(root->lchild, x);

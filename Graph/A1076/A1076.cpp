@@ -1,51 +1,65 @@
 /*
  * @Author: xinyu Li
  * @Date: 2021-10-30 16:15:16
- * @LastEditTime: 2021-10-30 23:50:22
+ * @LastEditTime: 2022-03-04 09:44:10
  * @Description: 
- * @FilePath: \helloworld\fuck\Graph\A1076.cpp
+ * @FilePath: \helloworld\fuck\Graph\A1076\A1076.cpp
  * I am because you are
  */
 #include<bits/stdc++.h>
 using namespace std;
 const int maxn = 1010;
-int test[maxn] = {0}, N, K, L;
-struct node{
-    int id;
-    int level;
-};
-vector<int> G[maxn];
-// void DFS(int now, int l)
-// {
-//     test[now] = 1;
-//     cnt++;
-//     if(l == L) return;
-//     for(int i=0;i<G[now].size();i++){
-//         if(!test[G[now][i]]){
-//             DFS(G[now][i], l+1);  
-//         }
-//     }   
-// }
-// void DFStravel(int K)
-// {
-//     for(int i=0;i<K;i++){
-//         cin>>a;
-//         int l = 0;
-//         DFS(a, l);
-//         cout<<cnt-1<<endl;
-//         cnt = 0;
-//         memset(test, 0, sizeof(int)*maxn);
-//     }
-// }
-/*
-5 3
-0
-1 1
-1 2
-2 1 3
-1 4
-1 1
+const int INF = 1000000;
+int graph[maxn][maxn], vis[maxn];
+int n, l;
+int bfs(int root)
+{
+    queue<int> q;
+    q.push(root);
+    vis[root] = 1;
+    int size, lev = 0, cnt = 0;
+    while(!q.empty()){
+        size = q.size();
+        if(lev==l) return cnt; 
+        lev++;
+        for(int i=0;i<size;i++){
+            int top = q.front();
+            q.pop();
+            for(int j=1;j<=n;j++){
+                if(!vis[j] && graph[top][j]!=INF){
+                    q.push(j);
+                    vis[j] = 1;
+                    cnt++;
+                }
+            }
+        }
+    }
+    return cnt;
+}
+int main()
+{
+    cin>>n>>l;
+    int k, a;
+    fill(graph[0], graph[0]+maxn*maxn, INF);
+    for(int i=0;i<n;i++){
+        cin>>k;
+        for(int j=0;j<k;j++){
+            cin>>a;
+            graph[a][i+1] = 1;
+        }
+    }
 
+    cin>>k;
+    for(int i=0;i<k;i++){
+        cin>>a;
+        fill(vis, vis+maxn, 0);
+        int out = bfs(a);
+        cout<<out<<endl<<endl;
+    }
+    system("pause");
+}
+
+/*
 7 3
 3 2 3 4
 0
@@ -54,44 +68,5 @@ vector<int> G[maxn];
 2 3 4
 1 4
 1 5
-1 6
+2 2 6
 */
-void BFS(int K)
-{   
-    int a;
-    for(int i=0;i<K;i++){
-        cin>>a;
-        queue<node> q;
-        q.push(node{a, 0});
-        test[a] = 1;
-        int cnt = 0;
-        while(!q.empty()){
-            node top = q.front();
-            q.pop();
-            for(int j=0;j<G[top.id].size();j++){
-                if(!test[G[top.id][j]] && top.level+1 <= L){ 
-                    q.push(node{G[top.id][j], top.level+1});
-                    test[G[top.id][j]] = 1;
-                    cnt++;
-                }
-            }
-        }
-        memset(test, 0, sizeof(int)*(N+1)); //very important 要么直接sizeof(test)，要么用sizeof(int)*(N+1)，不是*N，因为数组到N+1都是有意义的
-        cout<<cnt<<endl;
-    }
-}
-int main()
-{
-    cin>>N>>L;
-    int n, a;
-    for(int i=1;i<=N;i++){
-        cin>>n;
-        for(int j=0;j<n;j++){
-            cin>>a;
-            G[a].push_back(i);
-        }
-    }
-    cin>>K;
-    BFS(K);
-    system("pause");
-}

@@ -1,3 +1,11 @@
+/*
+ * @Author: xinyu Li
+ * @Date: 2021-10-18 09:45:19
+ * @LastEditTime: 2022-02-12 11:35:39
+ * @Description: 
+ * @FilePath: \helloworld\fuck\BFS\A1091.cpp
+ * I am because you are
+ */
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -32,8 +40,8 @@ int BFS(int x, int y, int z)
     s.z = z;
     int count = 1;
     q.push(s);
-    inq[x][y][z] = true;
-    while(!q.empty()){
+    inq[x][y][z] = true;            //关键
+    while(!q.empty()){              //当只允许扩展1时，bfs只会访问图中的1，所以一次bfs可以算一整块1的数量，而不能算所有
         node top = q.front();
         q.pop();
         for(int i=0;i<6;i++){

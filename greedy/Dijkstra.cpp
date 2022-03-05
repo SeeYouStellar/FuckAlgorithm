@@ -1,3 +1,11 @@
+/*
+ * @Author: xinyu Li
+ * @Date: 2021-10-10 11:48:17
+ * @LastEditTime: 2022-01-15 16:51:42
+ * @Description: 
+ * @FilePath: \helloworld\fuck\greedy\Dijkstra.cpp
+ * I am because you are
+ */
 //不用优先队列,不用类的版本
 #include<iostream>
 #include<cstring>

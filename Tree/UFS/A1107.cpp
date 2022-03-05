@@ -1,69 +1,66 @@
 /*
-* @Author: xinyu Li
-* @Date: 2021-10-25 20:25:35
- * @LastEditTime: 2021-10-25 23:03:48
-* @Description: 
+ * @Author: xinyu Li
+ * @Date: 2021-10-25 20:25:35
+ * @LastEditTime: 2022-02-15 21:04:59
+ * @Description: 
  * @FilePath: \helloworld\fuck\Tree\UFS\A1107.cpp
-* I am because you are
-*/
-//将所有人的编号构建成并查集，两个编号是否合并根据这两个人是否有喜好相同，只要一个喜好a有人i喜欢则isRoot[a]=i，所以某个人的喜好是否有人也喜欢，即看isRoot是否有大于0的值，
-//如果当前没有人喜欢这个喜好则将这个人自己和自己合并（即啥也不做）。所以每个人要么和其他人合并，要么自己令其一个集合，自己为该集合的根节点。所以只要找到这些人中的根节点的个数，那么就找到了集合的个数
+ * I am because you are
+ */
 #include <bits/stdc++.h>
 using namespace std;
-int N, father[1001], isRoot[1001] = {0}, course[1001] = {0};
-void init(int n)
+//Union_ find set :并查集是为了将不同元素分成多个集合的数据结构。实际上就是一个father数组。并查集靠Union_操作形成不同的集合。
+int N, K, father[1010], course[1010];
+int find(int x)
 {
-    for (int i = 1; i <= n; i++){
-        father[i] = i;
-        isRoot[i] = 0;
-    }
+    if(x == father[x]) return x;
+    father[x] = find(father[x]);
+    return father[x];
 }
-int find(int node)
-{
-    int tmp = node;
-    while (father[node] != node)
-        node = father[node];
-    while (tmp != father[tmp]){
-        int a = tmp;
-        tmp = father[tmp];
-        father[a] = node;
-    }
-    return node;
-}
-void Union(int a, int b)
+void Union_(int a, int b)
 {
     int fa = find(a);
     int fb = find(b);
-    if (fa != fb)
+    if(fa != fb)
         father[fa] = fb;
 }
-bool cmp(int a, int b) { return a > b; }
+void init()
+{
+    for(int i=1;i<=N;i++){
+        father[i] = i;
+    }
+}
 int main()
 {
-    int n, a;
-    cin >> N;
-    init(N);
-    for (int i = 1; i <= N; i++){
-        scanf("%d:", &n);
-        for (int j = 0; j < n; j++){
-            scanf("%d", &a);
-            if (course[a] == 0)     //每个人的喜好要么还没人喜欢，要么已经有人喜欢了，有人喜欢则与喜欢该喜好的人的根节点Union，没有则和自己Union
-                course[a] = i;
-            Union(i, find(course[a]));
+    cin>>N;
+    int a;
+    init();
+    getchar();
+    for(int i=0;i<N;i++){
+        scanf("%d: ", &K);
+        
+        for(int j=0;j<K;j++){
+            cin>>a;
+            if(!course[a]) course[a] = i+1;
+            else Union_(course[a], i+1);
         }
     }
-    for (int i = 1; i <= N; i++)
-        isRoot[find(i)]++;
-    int ans = 0;
-    for (int i = 1; i <= N; i++)
-        if (isRoot[i] != 0)
-            ans++;
-    cout << ans << endl;
-    sort(isRoot + 1, isRoot + N + 1, cmp);
-    for (int i = 1; i <= ans; i++){
-        cout << isRoot[i];
-        if (i < ans)
-            cout << " ";
+    for(int i=1;i<=N;i++) find(i);        //保证每个集合的father[x]都只有一个,在find过程中调整father[x]
+    vector<int> v;      
+    int cc = 0;                           //每个集合拥有唯一father后，只要遍历每个father[x]就可以找到该集合的元素
+    for(int i=1;i<=N;i++){
+        if(father[i] == i){
+            cc++;
+            int count = 0;
+            for(int j=1;j<=N;j++){
+                if(father[j] == i)
+                    count++;
+            }
+            v.push_back(count);
+        }
     }
+    cout<<cc<<endl;
+    sort(v.rbegin(), v.rend());
+    cout<<v[0];
+    for(int i=1;i<v.size();i++) cout<<" "<<v[i];
     system("pause");
 }

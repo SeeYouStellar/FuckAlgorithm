@@ -1,7 +1,7 @@
 /*
  * @Author: xinyu Li
  * @Date: 2021-10-29 23:04:13
- * @LastEditTime: 2021-10-30 15:47:18
+ * @LastEditTime: 2022-02-22 09:10:52
  * @Description: 
  * @FilePath: \helloworld\fuck\Graph\A1021\A1021.cpp
  * I am because you are
@@ -11,13 +11,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 const int maxn = 10010;
-int Graph[maxn][maxn] = {0}, N, test[maxn] = {0}, bestd = 0, best = 0, parent[maxn] = {0};
+int N, test[maxn] = {0}, bestd = 0, best = 0, parent[maxn] = {0};
 vector<int> G[maxn];
 map<int, int> m;
 void DFS(int now, int d)
 {
     if(d > best) best = d;
-    test[now] = 1;
+    test[now] = 1; 
     for(int i=0;i<G[now].size();i++){
         if(!test[G[now][i]]){
             DFS(G[now][i], d+1);
@@ -33,17 +33,14 @@ int DFStravel()
             cnt++;
         }
     }
-    memset(test, 0, sizeof(int)*maxn);
-    d = 0;
-    best = 0;
     if(cnt != 1) return cnt;
     for(int i=1;i<=N;i++){
-        DFS(i, d);
-        if(best > bestd) bestd = best;
-        m[i] = best;
         best = 0;
         d = 0;
         memset(test, 0, sizeof(int)*maxn);
+        DFS(i, d);
+        if(best > bestd) bestd = best;
+        m[i] = best;
     }
     return cnt;
 }

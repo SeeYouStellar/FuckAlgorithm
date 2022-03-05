@@ -1,7 +1,7 @@
 /*
  * @Author: xinyu Li
  * @Date: 2021-10-18 09:45:19
- * @LastEditTime: 2021-10-25 10:02:17
+ * @LastEditTime: 2022-02-05 19:59:45
  * @Description: 
  * @FilePath: \helloworld\fuck\DFS\Recurse\MaxSumPlus.cpp
  * I am because you are
@@ -27,7 +27,7 @@ int arr[5] = {0, 2, 3, 3, 4};
 vector<int> out;
 vector<int> choice;
 int bestc = 0; //全局最优乘积
-void backtrack(int i, int cc, int cal, int n)
+void DFS(int i, int cc, int cal, int n)
 {
     if(n == N){
         if(cc == X && cal > bestc){
@@ -36,16 +36,16 @@ void backtrack(int i, int cc, int cal, int n)
         }
         return ;
     }
-    if(n > N || cc > X || i > arr_N) return ;
+    if(cc > X || i > arr_N) return ;
     out.push_back(arr[i+1]);
-    backtrack(i+1, cc+arr[i+1], cal+pow(arr[i+1], 2), n+1);
+    DFS(i+1, cc+arr[i+1], cal+pow(arr[i+1], 2), n+1);
     out.pop_back();
-    backtrack(i+1, cc, cal, n); 
+    DFS(i+1, cc, cal, n); 
 }
 int main()
 {
     cin>>N>>X;
-    backtrack(0, 0, 0, 0);
+    DFS(0, 0, 0, 0);
     cout<<bestc<<endl;
     for(int i=0;i<choice.size();i++)
         cout<<choice[i]<<" ";
