@@ -1,0 +1,13 @@
+{
+    "len":1,
+    "result":[
+        {
+        "class_name":"zang_wu",
+        "score":0.9716758728027344,
+        "xmin":180,
+        "ymin":292,
+        "xmax":271,
+        "ymax":358
+        }
+    ]
+}
