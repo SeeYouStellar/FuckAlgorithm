@@ -6,7 +6,7 @@
 $dp[i]=max\{dp[j]|arr[j]<arr[i], 0\le j <i\}+1 , dp[0]=0$ 
 
 **伪代码**如下：
-```
+```cpp
 int lengthOfLIS(vector<int>& nums) {
     int dp[2501], MAX = 0;
     memset(dp, 0, sizeof(dp));
@@ -29,7 +29,7 @@ lower_bound(int* begin, int* end, element, cmp):找到序列中第一个大于�
 upper_bound(int* begin, int* end, element, cmp):找到序列中第一个大于element的元素指针并返回
 ```
 **伪代码**如下：
-```
+```cpp
 const int maxn = 100010;
 int n, dp[maxn], a[maxn];
 int lengthOfLIS()
@@ -57,7 +57,7 @@ max{dp[i-1][j], dp[i][j-1]}& \text{arr[i]!=arr[j]}\\
 dp[i-1][i-1]+1& \text{arr[i]==arr[j]}
 \end{cases}$$
 **伪代码**如下：
-```
+```cpp
 int n, a[100010], b[100010], dp[10010][10010];
 int lengthofLCS() {
     cin>>n;
@@ -83,7 +83,7 @@ b: 5 3 4 1 8 -> 2 3 1 5 4
 ```
 接下来，有这么一句话肯定是对的，序列$b$中的子序列若和序列$a$相同，那么此时离散化后的序列$b$的子序列必是离散化后序列$a$的子序列。然后这个离散化的子序列还一定有序，因为i序列$a$离散化是有序的，其子序列也一定有序。这样就找到了**离散化后相同子序列**的约束，即只需要找离散化后序列$b$中**最大递增子序列**即可。
 **伪代码**如下：
-```
+```cpp
 const int maxn = 100010;
 int n, dp[maxn], a[maxn], b[maxn];
 map<int, int> m;
