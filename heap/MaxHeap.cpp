@@ -35,7 +35,7 @@ void upadjust(int i)
 }
 void createHeap() //O(n)
 {
-    for(int i=N/2;i>=1;i--)
+    for(int i=N/2;i>=1;i--)  // 从第一个非叶子结点开始向下调整，遍历每个非叶子结点
         downadjust(i);
 }
 int Delete()  //O(logn)  大顶堆的删除只删根节点

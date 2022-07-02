@@ -65,3 +65,38 @@ public:
 };
 ```
 
+### [剑指 Offer 56 - II. 数组中数字出现的次数 II](https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-ii-lcof/)
+
+> 三个为一对，找出唯一一个单独的数字
+
+**思路：**把所有数字的每一位加起来对3求余即为单独的数字
+
+```c++
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int count[32] = {0};  // 记录int32每一位的和
+        int n = nums.size();
+        // 计算所有数的每位和
+        for(int i=0;i<n;i++){
+            for(int j=31;j>=0;j--){
+                count[j]+=nums[i]&1;
+                nums[i]>>=1;
+            }
+        }
+        // 每位对3求余
+        for(int i=0;i<32;i++){
+            count[i]%=3;
+        }
+        int res = 0;
+        long tmp = 1;
+        // 将二进制转为10进制
+        for(int j=31;j>=0;j--){
+            res+=count[j]*tmp;
+            tmp<<=1;
+        }
+        return res;
+    }
+};
+```
+
