@@ -23,7 +23,7 @@ int part(int l, int r)
 }
 void quickSort(int l, int r)
 {
-    if(l >= r) return;
+    if(l > r) return;
     int p = part(l, r);
     quickSort(l, p-1);
     quickSort(p+1, r);
