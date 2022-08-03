@@ -1,4 +1,4 @@
-// 朴素Dijkstra算法：不使用堆优化（优先队列）
+// 朴素Dijkstra算法：不使用堆优化（优先队列）---------O(v^2)
 #include<bits/stdc++.h>
 using namespace std;
 int graph[100][100], dist[100], vis[100], n, src=0, dst=n-1;
