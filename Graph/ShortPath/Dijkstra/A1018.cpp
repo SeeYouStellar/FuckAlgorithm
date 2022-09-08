@@ -6,6 +6,7 @@
  * @FilePath: \helloworld\fuck\Graph\ShortPath\Dijkstra\A1018.cpp
  * I am because you are
  */
+// dfs+dijkstra
 #include<bits/stdc++.h>
 using namespace std;
 const int maxn = 510;

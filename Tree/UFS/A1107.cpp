@@ -44,7 +44,7 @@ int main()
             else Union_(course[a], i+1);
         }
     }
-    for(int i=1;i<=N;i++) find(i);        //保证每个集合的father[x]都只有一个,在find过程中调整father[x] 关键
+    for(int i=1;i<=N;i++) find(i);        //保证每个集合的father[x]都只有一个,在find过程中调整father[x] 关键   上面的unit只是把每个子集像树一样串了起来，同一个子集中的节点都有一个共同根节点，但是中间节点的father[i]不一定是根节点
     vector<int> v;      
     int cc = 0;                           //每个集合拥有唯一father后，只要遍历每个father[x]就可以找到该集合的元素
     for(int i=1;i<=N;i++){
