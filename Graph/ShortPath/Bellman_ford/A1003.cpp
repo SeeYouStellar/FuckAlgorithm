@@ -31,7 +31,7 @@ void bellman_ford()
                     if(vv[u]<vv[j]+v[u]){
                         vv[u] = vv[j]+v[u];
                     }
-                    pre[u].insert(j);
+                    pre[u].insert(j); 
                     num[u] = 0;
                     for(set<int>::iterator it = pre[u].begin();it!=pre[u].end();it++){//重新计算
                         num[u]+=num[*it];
