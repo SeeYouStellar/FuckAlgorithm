@@ -53,7 +53,7 @@ int lengthOfLIS()
 **状态转移方程**如下，使用二维线性DP：
 $$dp[i][j]=
 \begin{cases}
-max{dp[i-1][j], dp[i][j-1]}& \text{arr[i]!=arr[j]}\\
+max\{dp[i-1][j], dp[i][j-1]\}& \text{arr[i]!=arr[j]}\\
 dp[i-1][i-1]+1& \text{arr[i]==arr[j]}
 \end{cases}$$
 **伪代码**如下：
