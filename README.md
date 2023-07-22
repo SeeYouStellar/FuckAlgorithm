@@ -27,6 +27,7 @@ LeetCode 代码和题解集合
 |[lc647 回文子串](https://leetcode.cn/problems/palindromic-substrings/)|[回文问题类型2](DP\Palindrome\lc647.go)|
 |[lc53 最大子数组和](https://leetcode.cn/problems/maximum-subarray/)|[最大子串和问题**母题**](DP\子串\lc53.go)|
 |[]()|[LCS/LIS](DP\子序列\readme.md)|
+|[lc918 环形子数组的最大和](https://leetcode.cn/problems/maximum-sum-circular-subarray/)|[最大子串问题2](DP\子串\lc918.md)|
 |[lc834 树中距离之和](https://leetcode.cn/problems/sum-of-distances-in-tree/)|[TreeDP](DP\TreeDp\lc834.md)|
 
 ### 7. Graph
