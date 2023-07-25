@@ -63,3 +63,17 @@ LeetCode 代码和题解集合
 |[lc9 回文数](https://leetcode.cn/problems/palindrome-number/)|[:memo:](GoodTrick\lc9.md)|
 |[lc2780 合法分割的最小下标](https://leetcode.cn/problems/minimum-index-of-a-valid-split/)|[证明题](GoodTrick\lc2780.md)|
 ### 15. Mutithread
+
+### 16. 单调队列
+| 题     | 笔记 |
+| ----------- | ----------- |
+|[lc918 环形子数组的最大和](https://leetcode.cn/problems/maximum-sum-circular-subarray/description/)|[单调递增队列](MonotonicQueue\lc918.md)|
+|[lc239 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/)|[模板题](MonotonicQueue\lc239.md)|
+|[lc862 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/)|[单调递增队列](MonotonicQueue\lc862.md)|
+|[lc1499 满足不等式的最大值](https://leetcode.cn/problems/max-value-of-equation/)|[单调递减队列](MonotonicQueue\lc1499.md)|
+
+### 17. 数据结构
+| 题     | 笔记 |
+| ----------- | ----------- |
+|[lc2208 将数组和减半的最少操作次数](https://leetcode.cn/problems/minimum-operations-to-halve-array-sum/description/)|[贪心+优先队列](Datastructure\priority_queue\lc2208.md)|
+||[大顶堆(优先队列)模板](Datastructure\heap\MaxHeap.cpp)|
