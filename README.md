@@ -42,7 +42,7 @@ LeetCode 代码和题解集合
 | [lc979 在二叉树中分配硬币](https://leetcode.cn/problems/distribute-coins-in-binary-tree/) |[:memo:](Tree\BST\lc979.md)  |
 
 
-### 9. Datastructre
+### 9. 基础数据结构
 
 
 ### 10. PrefixSum
@@ -72,8 +72,15 @@ LeetCode 代码和题解集合
 |[lc862 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/)|[单调递增队列](MonotonicQueue\lc862.md)|
 |[lc1499 满足不等式的最大值](https://leetcode.cn/problems/max-value-of-equation/)|[单调递减队列](MonotonicQueue\lc1499.md)|
 
-### 17. 数据结构
+### 17. 高级数据结构
 | 题     | 笔记 |
 | ----------- | ----------- |
 |[lc2208 将数组和减半的最少操作次数](https://leetcode.cn/problems/minimum-operations-to-halve-array-sum/description/)|[贪心+优先队列](Datastructure\priority_queue\lc2208.md)|
 ||[大顶堆(优先队列)模板](Datastructure\heap\MaxHeap.cpp)|
+
+
+### 18. 模拟
+| 题     | 笔记 |
+| ----------- | ----------- |
+|[lc722 删除注释](https://leetcode.cn/problems/remove-comments/description/)|[栈模拟](模拟\lc722.md)|
+|[lc24 两两交换链表中的节点](https://leetcode.cn/problems/swap-nodes-in-pairs/description/)|[链表模拟](模拟\lc24.md)|
