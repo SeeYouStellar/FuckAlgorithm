@@ -75,8 +75,10 @@ LeetCode 代码和题解集合
 ### 17. 高级数据结构
 | 题     | 笔记 |
 | ----------- | ----------- |
-|[lc2208 将数组和减半的最少操作次数](https://leetcode.cn/problems/minimum-operations-to-halve-array-sum/description/)|[贪心+优先队列](Datastructure\priority_queue\lc2208.md)|
-||[大顶堆(优先队列)模板](Datastructure\heap\MaxHeap.cpp)|
+|[lc2208 将数组和减半的最少操作次数](https://leetcode.cn/problems/minimum-operations-to-halve-array-sum/description/)|[贪心+优先队列](Datastructure\heap_PriorityQueue\lc2208.md)|
+||[大顶堆(优先队列)手动实现模板](Datastructure\heap_PriorityQueue\MaxHeap.md)|
+||[c++STL优先队列模板](Datastructure\heap_PriorityQueue\cplusplusPQ.md)|
+|[lc23 合并 K 个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists/description/)|[优先队列+链表](Datastructure\heap_PriorityQueue\lc23.md)|
 
 
 ### 18. 模拟
