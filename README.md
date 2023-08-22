@@ -14,7 +14,9 @@ LeetCode 代码和题解集合
 |[lc6929 数组的最大美丽值](https://leetcode.cn/problems/maximum-beauty-of-an-array-after-applying-operation/)|[最大连续子串](binarySearch\lc6929.md)|
 
 ### 4. TwoPointers
-
+| 题     | 笔记 |
+| ----------- | ----------- |
+|[lc6954 统计和小于目标的下标对数目](https://leetcode.cn/problems/count-pairs-whose-sum-is-less-than-target/description/)|[排序+双指针](two_pointers\lc6954.go)|
 
 ### 5. BranchBound
 
@@ -71,6 +73,7 @@ LeetCode 代码和题解集合
 |[lc239 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/)|[模板题](MonotonicQueue\lc239.md)|
 |[lc862 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/)|[单调递增队列](MonotonicQueue\lc862.md)|
 |[lc1499 满足不等式的最大值](https://leetcode.cn/problems/max-value-of-equation/)|[单调递减队列](MonotonicQueue\lc1499.md)|
+|[lc2831 找出最长等值子数组](https://leetcode.cn/problems/find-the-longest-equal-subarray/description/)|[双端队列](MonotonicQueue\lc2831.md)|
 
 ### 17. 高级数据结构
 | 题     | 笔记 |
@@ -79,6 +82,7 @@ LeetCode 代码和题解集合
 ||[大顶堆(优先队列)手动实现模板](Datastructure\heap_PriorityQueue\MaxHeap.md)|
 ||[c++STL优先队列模板](Datastructure\heap_PriorityQueue\cplusplusPQ.md)|
 |[lc23 合并 K 个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists/description/)|[优先队列+链表](Datastructure\heap_PriorityQueue\lc23.md)|
+|[lc155 最小栈](https://leetcode.cn/problems/min-stack/description/)|[辅助栈](Datastructure\AssistStack\Patten.cpp)|
 
 
 ### 18. 模拟
