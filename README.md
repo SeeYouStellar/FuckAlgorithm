@@ -17,6 +17,7 @@ LeetCode 代码和题解集合
 | 题     | 笔记 |
 | ----------- | ----------- |
 |[lc6954 统计和小于目标的下标对数目](https://leetcode.cn/problems/count-pairs-whose-sum-is-less-than-target/description/)|[排序+双指针](two_pointers\lc6954.go)|
+|[lc2831 找出最长等值子数组](https://leetcode.cn/problems/find-the-longest-equal-subarray/description/)|[分组+双指针](MonotonicQueue\lc2831.md)|
 
 ### 5. BranchBound
 
@@ -32,6 +33,9 @@ LeetCode 代码和题解集合
 |[lc918 环形子数组的最大和](https://leetcode.cn/problems/maximum-sum-circular-subarray/)|[最大子串问题2](DP\子串\lc918.md)|
 |[lc834 树中距离之和](https://leetcode.cn/problems/sum-of-distances-in-tree/)|[TreeDP](DP\TreeDp\lc834.md)|
 |[1289. 下降路径最小和 II](https://leetcode.cn/problems/minimum-falling-path-sum-ii/description/)|[二维DP及其空间/时间复杂度优化-数组压缩](DP\two_dimention_dp\lc1289.md)|
+|[lc2830 销售利润最大化](https://leetcode.cn/problems/maximize-the-profit-as-the-salesman/description/)|[排序+二分+DP](DP\others\lc2830.cpp)|
+|[lc1235 规划兼职工作](https://leetcode.cn/problems/maximum-profit-in-job-scheduling/description/)|[排序+二分+DP](DP\others\lc1235.cpp)|
+|[lc2008 出租车的最大盈利](https://leetcode.cn/problems/maximum-earnings-from-taxi/description/)|[排序+二分+DP](DP\others\lc2008.cpp)|
 ### 7. Graph
 
 
