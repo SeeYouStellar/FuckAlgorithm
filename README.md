@@ -36,6 +36,7 @@ LeetCode 代码和题解集合
 |[lc2830 销售利润最大化](https://leetcode.cn/problems/maximize-the-profit-as-the-salesman/description/)|[排序+二分+DP](DP\others\lc2830.cpp)|
 |[lc1235 规划兼职工作](https://leetcode.cn/problems/maximum-profit-in-job-scheduling/description/)|[排序+二分+DP](DP\others\lc1235.cpp)|
 |[lc2008 出租车的最大盈利](https://leetcode.cn/problems/maximum-earnings-from-taxi/description/)|[排序+二分+DP](DP\others\lc2008.cpp)|
+|[lc823 带因子的二叉树](https://leetcode.cn/problems/binary-trees-with-factors/description/)|[排序+哈希表+树形DP](DP\TreeDp\lc823.cpp)|
 ### 7. Graph
 
 
@@ -94,3 +95,14 @@ LeetCode 代码和题解集合
 | ----------- | ----------- |
 |[lc722 删除注释](https://leetcode.cn/problems/remove-comments/description/)|[栈模拟](模拟\lc722.md)|
 |[lc24 两两交换链表中的节点](https://leetcode.cn/problems/swap-nodes-in-pairs/description/)|[链表模拟](模拟\lc24.md)|
+
+### 19. 哈希
+| 题     | 笔记 |
+| ----------- | ----------- |
+|[lc2834 找出美丽数组的最小和](https://leetcode.cn/problems/find-the-minimum-possible-sum-of-a-beautiful-array/description/)|[哈希+证明](Hash\lc2834.md)|
+
+### 20. 贪心
+| 题     | 笔记 |
+| ----------- | ----------- |
+|[lc1921 消灭怪物的最大数量](https://leetcode.cn/problems/eliminate-maximum-number-of-monsters/?envType=daily-question&envId=2023-09-03)|[贪心+排序](tanxin\lc1921.md)|
+
