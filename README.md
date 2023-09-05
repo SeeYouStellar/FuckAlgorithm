@@ -53,6 +53,13 @@ LeetCode 代码和题解集合
 
 
 ### 10. PrefixSum
+| 题     | 笔记 |
+| ----------- | ----------- |
+|[lc560 和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k/)|[前缀和+哈希](Prefix\Prefix_Hash\lc560.cpp)|
+|[lc974 和可被 K 整除的子数组](https://leetcode.cn/problems/subarray-sums-divisible-by-k/)|[前缀和+哈希+取模](Prefix\Prefix_Hash\lc974.cpp)|
+|[lc523 连续的子数组和](https://leetcode.cn/problems/continuous-subarray-sum/)|[前缀和+哈希+取模+长度限制](Prefix\Prefix_Hash\lc523.cpp)|
+|[lc525 连续数组](https://leetcode.cn/problems/contiguous-array/)|[前缀和+哈希+取模](Prefix\Prefix_Hash\lc525.cpp)|
+|[lc2845 统计趣味子数组的数目](https://leetcode.cn/problems/count-of-interesting-subarrays/description/)|[前缀和+哈希+取模](Prefix\Prefix_Hash\lc2845.cpp)|
 
 
 ### 11. Sort
