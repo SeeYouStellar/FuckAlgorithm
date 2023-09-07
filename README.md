@@ -37,6 +37,9 @@ LeetCode 代码和题解集合
 |[lc1235 规划兼职工作](https://leetcode.cn/problems/maximum-profit-in-job-scheduling/description/)|[排序+二分+DP](DP\others\lc1235.cpp)|
 |[lc2008 出租车的最大盈利](https://leetcode.cn/problems/maximum-earnings-from-taxi/description/)|[排序+二分+DP](DP\others\lc2008.cpp)|
 |[lc823 带因子的二叉树](https://leetcode.cn/problems/binary-trees-with-factors/description/)|[排序+哈希表+树形DP](DP\TreeDp\lc823.cpp)|
+|[lc416 分割等和子集](https://leetcode.cn/problems/partition-equal-subset-sum/description/)|[01背包问题](DP\Bag\01Bag\lc416.cpp)|
+
+
 ### 7. Graph
 
 
