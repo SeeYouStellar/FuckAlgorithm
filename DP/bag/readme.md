@@ -10,41 +10,37 @@ dp[i-1][j]& \text{w[i]>j}
 \end{cases}
 $$
 
+![Alt text](image/image-2.png)
 
+数组压缩后：注意背包重量遍历顺序
 
-#### 我的理解是：
->轮到选择第$i$个物品时，每个$dp[i][j]$都是独立的状态，没有联系。如果有联系，计算$dp[i][j-w[i]]$时选择了第$i$个物品，那么$dp[i][j]$时就不能选择这个物品了。所以$dp[i][j]$这个状态要和没有选择第$i$个物品的状态进行比较,而我们定义的子问题是计算i件物品，那么只需与第$i-1$件物品的某些状态进行比较计即可（在状态方程式中已经说明）。
+![Alt text](image/image.png)
 #### 代码：
 ```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int t, m, dp[1002];
-int main()
-{
-    cin >> t >> m;
-    vector<pair<int, int>> v(m + 1);
-    for (int i = 1; i <= m; i++)
-        cin >> v[i].first >> v[i].second;
-    for (int i = 1; i <= m; i++)
-        for (int j = 1; j <= t; j++)
-        {
-            if (v[i].first < j)
-                dp[j] = max(dp[i - 1][j], dp[i - 1][j - v[i].first] + v[i].second);
-            else
-                dp[j] = dp[i - 1][j]
+class Solution {
+public:
+    bool canPartition(vector<int>& nums， int bagWeight) {
+        int dp[20010] = {0}; // dp[i]代表当背包重量为i时，背包内的物品总价值
+        int n = nums.size(); // 物品个数
+        for(int i=1;i<=n;i++){
+            for(int j=bagWeight;j>=nums[i-1];j--){
+                dp[j]=max(dp[j], dp[j-nums[i-1]]+nums[i-1]);
+            }
         }
-
-    cout << dp[m][t] << endl;
-    system("pause");
-}
+        return dp[bagWeight];
+    }  
+};
 ```
 
 
 ### 完全0-1背包
->打破了0-1背包同一个$i$时，每个$dp[i][j]$相互没有联系这个约束，因为可以多次选择相同的物品，所以不仅要和$dp[i-1][i-w[i]]+v[i]$比，还要和
-$dp[i][i-w[i]]+v[i]$比，那么自然就只要和$dp[i][i-w[i]]+v[i]$比就行（因为$dp[i][i-w[i]]$在计算时已经考虑了dp[i-1][i-w[i]]）。
-#### 数组降维：
->道理就是上面说的，不需要物品这一维了
+按照0-1背包的思路，先遍历物品 $0<i<n$，再遍历背包重量 $0<j<bagWeight$，再遍历 $bagWeight/w[i]$ 个物品，时间复杂度为 $O(n^3)$  
+降低时间复杂度：数组降维，去掉物品维度
+```
+dp[j] = max(dp[j], dp[j-w[i]]+v[i])
+```  
+![Alt text](image/image-1.png)
+前者其实是```dp[i-1][j]```（不选物品i），后者其实是```dp[i][j-w[i]]+v[i]```（选择物品i），注意这里不是与```dp[i-1][j-w[i]]+v[i]```比较，因为是无限制的放物品，所以如果不选择当前物品不代表之前没有选择该物品，即应该找```dp[i][j-w[i]]```这个状态，即时事实上确实之前也没有选择该物品，那在更新```dp[i][j-w[i]]```时，也通过上面的状态方程，获取了```dp[i-1][j-w[i]]```
 #### 代码：
 ```cpp
 #include <bits/stdc++.h>
