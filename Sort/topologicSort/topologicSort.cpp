@@ -12,12 +12,12 @@ int in[10], n;
 vector<int> G[10];
 int topo()
 {
-    priority_queue<int, vector<int>> q;
+    priority_queue<int, vector<int>> q;  // queue也可以
     int cnt = 0;
     for(int i=0;i<n;i++){
         if(!in[i])
             q.push(i);
-    }
+    }       
     while(!q.empty()){
         int top = q.front();
         q.pop();

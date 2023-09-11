@@ -69,7 +69,10 @@ LeetCode 代码和题解集合
 
 
 ### 11. Sort
-
+| 题     | 笔记 |
+| ----------- | ----------- |
+|[lc207. 课程表](https://leetcode.cn/problems/course-schedule/description/?envType=daily-question&envId=2023-09-09)|[拓扑排序](Sort\topologicSort\lc207.cpp)|
+|[lc210 课程表 II](https://leetcode.cn/problems/course-schedule-ii/?envType=daily-question&envId=2023-09-10)|[拓扑排序](Sort\topologicSort\lc210.cpp)|
 
 ### 12. BitOperation
 
@@ -118,4 +121,5 @@ LeetCode 代码和题解集合
 | 题     | 笔记 |
 | ----------- | ----------- |
 |[lc1921 消灭怪物的最大数量](https://leetcode.cn/problems/eliminate-maximum-number-of-monsters/?envType=daily-question&envId=2023-09-03)|[贪心+排序](tanxin\lc1921.md)|
+
 
