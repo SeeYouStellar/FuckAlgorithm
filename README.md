@@ -31,17 +31,30 @@ LeetCode 代码和题解集合
 |[lc53 最大子数组和](https://leetcode.cn/problems/maximum-subarray/)|[最大子串和问题**母题**](DP\子串\lc53.go)|
 |[]()|[LCS/LIS](DP\子序列\readme.md)|
 |[lc918 环形子数组的最大和](https://leetcode.cn/problems/maximum-sum-circular-subarray/)|[最大子串问题2](DP\子串\lc918.md)|
-|[lc834 树中距离之和](https://leetcode.cn/problems/sum-of-distances-in-tree/)|[TreeDP](DP\TreeDp\lc834.md)|
 |[1289. 下降路径最小和 II](https://leetcode.cn/problems/minimum-falling-path-sum-ii/description/)|[二维DP及其空间/时间复杂度优化-数组压缩](DP\two_dimention_dp\lc1289.md)|
 |[lc2830 销售利润最大化](https://leetcode.cn/problems/maximize-the-profit-as-the-salesman/description/)|[排序+二分+DP](DP\others\lc2830.cpp)|
 |[lc1235 规划兼职工作](https://leetcode.cn/problems/maximum-profit-in-job-scheduling/description/)|[排序+二分+DP](DP\others\lc1235.cpp)|
 |[lc2008 出租车的最大盈利](https://leetcode.cn/problems/maximum-earnings-from-taxi/description/)|[排序+二分+DP](DP\others\lc2008.cpp)|
-|[lc823 带因子的二叉树](https://leetcode.cn/problems/binary-trees-with-factors/description/)|[排序+哈希表+树形DP](DP\TreeDp\lc823.cpp)|
 |[lc416 分割等和子集](https://leetcode.cn/problems/partition-equal-subset-sum/description/)|[01背包问题](DP\Bag\01Bag\lc416.cpp)|
 |[lc322 零钱兑换](https://leetcode.cn/problems/coin-change/description/)|[完全背包问题](DP\Bag\CompleteBag\lc322.cpp)|
 |[lc518 零钱兑换II](https://leetcode.cn/problems/coin-change-ii/description/)|[完全背包问题](DP\Bag\CompleteBag\lc518.cpp)|
 |[lc279完全平方数](https://leetcode.cn/problems/perfect-squares/)|[完全背包问题](DP\Bag\CompleteBag\lc279.cpp)|
+|[lc337 打家劫舍 III](https://leetcode.cn/problems/house-robber-iii/)|[TreeDP](DP\TreeDp\lc337.cpp)|
+|[lc834 树中距离之和](https://leetcode.cn/problems/sum-of-distances-in-tree/)|[TreeDP](DP\TreeDp\lc834.md)|
+|[lc823 带因子的二叉树](https://leetcode.cn/problems/binary-trees-with-factors/description/)|[排序+哈希表+树形DP](DP\TreeDp\lc823.cpp)|
 
+#### 最大值最小化/最小值最大化问题
+|题|笔记|
+| ----------- | ----------- |
+|[lc2560 打家劫舍 IV](https://leetcode.cn/problems/house-robber-iv/description/)|[最大值最小化问题](DP\打家劫舍专题\lc2560.cpp)|
+
+#### 打家劫舍专题（力扣）
+|题|笔记|
+| ----------- | ----------- |
+|[lc198 打家劫舍 I](打家劫舍)|[DP](DP\打家劫舍专题\lc198.cpp)|
+|[lc213 打家劫舍 II](https://leetcode.cn/problems/house-robber-ii/)|[DP](DP\打家劫舍专题\lc213.cpp)|
+|[lc337 打家劫舍 III](https://leetcode.cn/problems/house-robber-iii/)|[TreeDP](DP\TreeDp\lc337.cpp)|
+|[lc2560 打家劫舍 IV](https://leetcode.cn/problems/house-robber-iv/description/)|[最大值最小化问题](DP\打家劫舍专题\lc2560.cpp)|
 
 ### 7. Graph
 
@@ -73,6 +86,7 @@ LeetCode 代码和题解集合
 | ----------- | ----------- |
 |[lc207. 课程表](https://leetcode.cn/problems/course-schedule/description/?envType=daily-question&envId=2023-09-09)|[拓扑排序](Sort\topologicSort\lc207.cpp)|
 |[lc210 课程表 II](https://leetcode.cn/problems/course-schedule-ii/?envType=daily-question&envId=2023-09-10)|[拓扑排序](Sort\topologicSort\lc210.cpp)|
+|[lc1462 课程表 IV](https://leetcode.cn/problems/course-schedule-iv/description/?envType=daily-question&envId=2023-09-12)|[拓扑排序](Sort\topologicSort\lc1462.cpp)|
 
 ### 12. BitOperation
 
@@ -116,6 +130,7 @@ LeetCode 代码和题解集合
 | 题     | 笔记 |
 | ----------- | ----------- |
 |[lc2834 找出美丽数组的最小和](https://leetcode.cn/problems/find-the-minimum-possible-sum-of-a-beautiful-array/description/)|[哈希+证明](Hash\lc2834.md)|
+|[lc1222 可以攻击国王的皇后](https://leetcode.cn/problems/queens-that-can-attack-the-king/description/?envType=daily-question&envId=2023-09-14)|[哈希](Hash\lc1222.cpp)|
 
 ### 20. 贪心
 | 题     | 笔记 |
