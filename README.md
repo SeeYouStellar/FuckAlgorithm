@@ -13,6 +13,11 @@ LeetCode 代码和题解集合
 | ----------- | ----------- |
 |[lc6929 数组的最大美丽值](https://leetcode.cn/problems/maximum-beauty-of-an-array-after-applying-operation/)|[最大连续子串](binarySearch\lc6929.md)|
 
+#### 最大值最小化/最小值最大化问题
+|题|笔记|
+| ----------- | ----------- |
+|[lc2560 打家劫舍 IV](https://leetcode.cn/problems/house-robber-iv/description/)|[最大值最小化问题+DP](DP\打家劫舍专题\lc2560.cpp)|
+
 ### 4. TwoPointers
 | 题     | 笔记 |
 | ----------- | ----------- |
@@ -42,11 +47,9 @@ LeetCode 代码和题解集合
 |[lc337 打家劫舍 III](https://leetcode.cn/problems/house-robber-iii/)|[TreeDP](DP\TreeDp\lc337.cpp)|
 |[lc834 树中距离之和](https://leetcode.cn/problems/sum-of-distances-in-tree/)|[TreeDP](DP\TreeDp\lc834.md)|
 |[lc823 带因子的二叉树](https://leetcode.cn/problems/binary-trees-with-factors/description/)|[排序+哈希表+树形DP](DP\TreeDp\lc823.cpp)|
-
-#### 最大值最小化/最小值最大化问题
-|题|笔记|
-| ----------- | ----------- |
-|[lc2560 打家劫舍 IV](https://leetcode.cn/problems/house-robber-iv/description/)|[最大值最小化问题](DP\打家劫舍专题\lc2560.cpp)|
+|[lc42 接雨水](https://leetcode.cn/submissions/detail/468626240/)|[一维DP](DP\lc42.cpp)|
+|[lc139 单词拆分](https://leetcode.cn/problems/word-break/?envType=study-plan-v2&envId=top-100-liked)|[字符串DP](DP\others\lc139.cpp)|
+|[lc32 最长有效括号](https://leetcode.cn/problems/longest-valid-parentheses/description/?envType=study-plan-v2&envId=top-100-liked)|[括号匹配类DP](DP\括号问题\lc32.cpp)|
 
 #### 打家劫舍专题（力扣）
 |题|笔记|
@@ -54,7 +57,7 @@ LeetCode 代码和题解集合
 |[lc198 打家劫舍 I](打家劫舍)|[DP](DP\打家劫舍专题\lc198.cpp)|
 |[lc213 打家劫舍 II](https://leetcode.cn/problems/house-robber-ii/)|[DP](DP\打家劫舍专题\lc213.cpp)|
 |[lc337 打家劫舍 III](https://leetcode.cn/problems/house-robber-iii/)|[TreeDP](DP\TreeDp\lc337.cpp)|
-|[lc2560 打家劫舍 IV](https://leetcode.cn/problems/house-robber-iv/description/)|[最大值最小化问题](DP\打家劫舍专题\lc2560.cpp)|
+|[lc2560 打家劫舍 IV](https://leetcode.cn/problems/house-robber-iv/description/)|[最大值最小化问题+DP](DP\打家劫舍专题\lc2560.cpp)|
 
 ### 7. Graph
 
@@ -131,6 +134,7 @@ LeetCode 代码和题解集合
 | ----------- | ----------- |
 |[lc2834 找出美丽数组的最小和](https://leetcode.cn/problems/find-the-minimum-possible-sum-of-a-beautiful-array/description/)|[哈希+证明](Hash\lc2834.md)|
 |[lc1222 可以攻击国王的皇后](https://leetcode.cn/problems/queens-that-can-attack-the-king/description/?envType=daily-question&envId=2023-09-14)|[哈希](Hash\lc1222.cpp)|
+|[lc49 字母异位词分组](https://leetcode.cn/problems/group-anagrams/?envType=study-plan-v2&envId=top-100-liked)|[哈希+模拟](Hash\lc49.cpp)|
 
 ### 20. 贪心
 | 题     | 笔记 |
