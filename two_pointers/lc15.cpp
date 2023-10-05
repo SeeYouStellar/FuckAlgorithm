@@ -1,30 +1,24 @@
 // 把三重循环简化成两重循环
-vector<vector<int>> threeSum(vector<int> &nums)
-{
-    sort(nums.begin(), nums.end());
-    int s = nums.size();
-    for (int i = 0; i < s; i++)
-    {
-        int k = s - 1;
-        if (i == 0 || nums[i - 1] != nums[i])
-        {
-            for (int j = i + 1; j < s; j++)
-            {
-                if (j == i + 1 || nums[j - 1] != nums[j])
-                {
-                    if (nums[i] + nums[j] + nums[k] < 0)
-                        continue;
-                    while (k > j && nums[i] + nums[j] + nums[k] > 0)
-                    {
-                        k--;
-                    }
-                    if (k == j) // 没有足够小的k使得三数相加为0，故后续若j增大，更不可能有足够小的k，所以直接跳出第二重循环
-                        break;
-                    if (nums[i] + nums[j] + nums[k] == 0)
-                        ans.push_back({nums[i], nums[j], nums[k]});
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        vector<vector<int>> res;
+        int n = nums.size();
+        sort(nums.begin(), nums.end());
+        for(int i=0;i<n;i++){
+            if(i>0&&nums[i]==nums[i-1])continue; // 防止重复
+            int k = n-1; // 关键
+            for(int j=i+1;j<n;j++){
+                if(j>i+1&&nums[j]==nums[j-1])continue;  // 防止重复
+                if(nums[i]+nums[j]+nums[k]<0) continue; // 这种情况k减小只会使总和更小，所以直接跳过
+                while(k>j&&nums[i]+nums[j]+nums[k]>0){
+                    k--;
+                }
+                if(k>j&&nums[i]+nums[j]+nums[k]==0){
+                    res.push_back(vector{nums[i], nums[j], nums[k]});
                 }
             }
         }
+        return res;
     }
-    return ans;
-}
+};

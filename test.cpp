@@ -1,11 +1,36 @@
-#include<cstring>
-#include<iostream>
+#include <cstring>
+#include <iostream>
 // #include<bits/stdc++.h>
 using namespace std;
-int main(){
-    char *p1;  // 指针存在栈上，未分配内存
-    char *p2 = (char*)malloc(128);  // 指针存在栈上，分配了内存
-    char *p3 = new char; // 指针存在栈上，空间分配在自由存储区
-    char *p4 = "hello world"; // 指针存在栈上，空间分配在beta区
-
+struct ListNode
+{
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(NULL) {}
+    ListNode(int x) : val(x), next(NULL) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+ListNode *reverseList(ListNode *head)
+{
+    if (head->next == NULL)
+    {
+        cout << head->val << endl;
+        return head;
+    }
+    ListNode *tail = reverseList(head->next);
+    ListNode *tmp = head->next;
+    tmp->next = head;
+    head->next = NULL;
+    cout << tmp->val << " " << head->val << endl;
+    return tail;
+}
+int main()
+{
+    ListNode* head = new ListNode(1);
+    ListNode* node1 = new ListNode(2);
+    ListNode* node2 = new ListNode(3);
+    head->next = node1;
+    node1->next = node2;
+    ListNode* res = reverseList(head);
+    system("pause");
 }

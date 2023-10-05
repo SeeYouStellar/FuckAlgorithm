@@ -23,6 +23,9 @@ LeetCode 代码和题解集合
 | ----------- | ----------- |
 |[lc6954 统计和小于目标的下标对数目](https://leetcode.cn/problems/count-pairs-whose-sum-is-less-than-target/description/)|[排序+双指针](two_pointers\lc6954.go)|
 |[lc2831 找出最长等值子数组](https://leetcode.cn/problems/find-the-longest-equal-subarray/description/)|[分组+双指针](MonotonicQueue\lc2831.md)|
+|[lc15 三树之和](https://leetcode.cn/problems/3sum/description/?envType=study-plan-v2&envId=top-100-liked)|[双指针](two_pointers\lc15.cpp)|
+|[lc763 划分字母区间](https://leetcode.cn/problems/partition-labels/description/?envType=study-plan-v2&envId=top-100-liked)|[双指针+贪心](two_pointers\lc763.cpp)|
+|[lc11 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/description/?envType=study-plan-v2&envId=top-100-liked)|[双指针](two_pointers\lc11.cpp)|
 
 ### 5. BranchBound
 
@@ -31,8 +34,8 @@ LeetCode 代码和题解集合
 | 题     | 笔记 |
 | ----------- | ----------- |
 |[lc1911 最大子序列交替和](https://leetcode.cn/problems/maximum-alternating-subsequence-sum/)|[股票买卖问题类型](DP\buy_stocks_time\lc1911.go)|
-|[lc5 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)|[回文问题类型1](DP\Palindrome\lc5.go)|
-|[lc647 回文子串](https://leetcode.cn/problems/palindromic-substrings/)|[回文问题类型2](DP\Palindrome\lc647.go)|
+|[lc5 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)|[回文问题类型1](DP\匹配问题\Palindrome\lc5.go)[CPP版本](DP\匹配问题\Palindrome\lc5.cpp)|
+|[lc647 回文子串](https://leetcode.cn/problems/palindromic-substrings/)|[回文问题类型2](DP\匹配问题\Palindrome\lc647.go)|
 |[lc53 最大子数组和](https://leetcode.cn/problems/maximum-subarray/)|[最大子串和问题**母题**](DP\子串\lc53.go)|
 |[]()|[LCS/LIS](DP\子序列\readme.md)|
 |[lc918 环形子数组的最大和](https://leetcode.cn/problems/maximum-sum-circular-subarray/)|[最大子串问题2](DP\子串\lc918.md)|
@@ -49,7 +52,7 @@ LeetCode 代码和题解集合
 |[lc823 带因子的二叉树](https://leetcode.cn/problems/binary-trees-with-factors/description/)|[排序+哈希表+树形DP](DP\TreeDp\lc823.cpp)|
 |[lc42 接雨水](https://leetcode.cn/submissions/detail/468626240/)|[一维DP](DP\lc42.cpp)|
 |[lc139 单词拆分](https://leetcode.cn/problems/word-break/?envType=study-plan-v2&envId=top-100-liked)|[字符串DP](DP\others\lc139.cpp)|
-|[lc32 最长有效括号](https://leetcode.cn/problems/longest-valid-parentheses/description/?envType=study-plan-v2&envId=top-100-liked)|[括号匹配类DP](DP\括号问题\lc32.cpp)|
+|[lc32 最长有效括号](https://leetcode.cn/problems/longest-valid-parentheses/description/?envType=study-plan-v2&envId=top-100-liked)|[括号匹配类DP](DP\匹配问题\括号问题\lc32.cpp)|
 
 #### 打家劫舍专题（力扣）
 |题|笔记|
@@ -142,3 +145,9 @@ LeetCode 代码和题解集合
 |[lc1921 消灭怪物的最大数量](https://leetcode.cn/problems/eliminate-maximum-number-of-monsters/?envType=daily-question&envId=2023-09-03)|[贪心+排序](tanxin\lc1921.md)|
 
 
+### 21. 链表
+| 题     | 笔记 |
+| ----------- | ----------- |
+|[lc21 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/description/?envType=study-plan-v2&envId=top-100-liked)|[原地合并链表](Datastructure\LinkedList\lc21.cpp)|
+|[lc234 回文链表](https://leetcode.cn/problems/palindrome-linked-list/)|[反转链表+快慢指针](Datastructure\LinkedList\lc234.cpp)|
+|[lc19 删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/?envType=study-plan-v2&envId=top-100-liked)|[快慢指针](Datastructure\LinkedList\lc19.cpp)|
