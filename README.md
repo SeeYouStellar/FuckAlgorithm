@@ -12,6 +12,9 @@ LeetCode 代码和题解集合
 | 题     | 笔记 |
 | ----------- | ----------- |
 |[lc6929 数组的最大美丽值](https://leetcode.cn/problems/maximum-beauty-of-an-array-after-applying-operation/)|[最大连续子串](binarySearch\lc6929.md)|
+|[lc34](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/description/?envType=study-plan-v2&envId=top-100-liked)|[二分及其越界判断](binarySearch\lc34.cpp)|
+|[lc33](https://leetcode.cn/problems/search-in-rotated-sorted-array/description/?envType=study-plan-v2&envId=top-100-liked)|[非严格递增二分](binarySearch\lc33.cpp)|
+
 
 #### 最大值最小化/最小值最大化问题
 |题|笔记|
@@ -151,3 +154,5 @@ LeetCode 代码和题解集合
 |[lc21 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/description/?envType=study-plan-v2&envId=top-100-liked)|[原地合并链表](Datastructure\LinkedList\lc21.cpp)|
 |[lc234 回文链表](https://leetcode.cn/problems/palindrome-linked-list/)|[反转链表+快慢指针](Datastructure\LinkedList\lc234.cpp)|
 |[lc19 删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/?envType=study-plan-v2&envId=top-100-liked)|[快慢指针](Datastructure\LinkedList\lc19.cpp)|
+|[lc138 随机链表的复制](https://leetcode.cn/problems/copy-list-with-random-pointer/?envType=study-plan-v2&envId=top-100-liked)|[哈希+链表](Datastructure\LinkedList\lc138.cpp)|
+|[lc148 排序链表](https://leetcode.cn/problems/sort-list/description/?envType=study-plan-v2&envId=top-100-liked)|[快慢指针+归并排序+链表](Datastructure\LinkedList\lc148.cpp)|
