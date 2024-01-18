@@ -23,6 +23,7 @@ void merge(int l1, int r1, int l2, int r2)
 }
 void mergeSort(int l, int r)
 {
+    // l == r :只有一个元素时不需要分，直接返回
     if(l < r){
         int mid = (l + r)/2;
         mergeSort(l, mid);

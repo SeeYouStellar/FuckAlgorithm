@@ -74,7 +74,16 @@ LeetCode 代码和题解集合
 #### Binary Tree
 | 题     | 笔记 |
 | ----------- | ----------- |
-| [lc979 在二叉树中分配硬币](https://leetcode.cn/problems/distribute-coins-in-binary-tree/) |[:memo:](Tree\BST\lc979.md)  |
+| [lc979 在二叉树中分配硬币](https://leetcode.cn/problems/distribute-coins-in-binary-tree/) |[:memo:](Tree\BST\lc979.md)|
+| [lc230 二叉搜索树中第K小的元素](https://leetcode.cn/problems/kth-smallest-element-in-a-bst/description/?envType=study-plan-v2&envId=top-100-liked) |[中序遍历](Tree\in_pre_postOrder\lc230.cpp)|
+| [lc114 二叉树展开为链表](https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/description/?envType=study-plan-v2&envId=top-100-liked) |[二叉树+链表+旋转](Tree\BST_list\lc114.cpp)|
+| [lc236 二叉树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/description/?envType=study-plan-v2&envId=top-100-liked) |[二叉树+分类讨论](Tree\BST\lc236.cpp)|
+| [lc98 验证二叉搜索树](https://leetcode.cn/problems/validate-binary-search-tree/?envType=study-plan-v2&envId=top-100-liked) |[BST特性](Tree\BST\lc98.cpp)|
+
+#### PathSum 专题
+| [lc437 路径总和 III](https://leetcode.cn/problems/path-sum-iii/description/?envType=study-plan-v2&envId=top-100-liked) |[前缀和+二叉树](Prefix\PathSum专题\lc437.cpp)|
+| [lc112 路径总和 I](https://leetcode.cn/problems/path-sum/description/) |[递归+二叉树](Prefix\PathSum专题\lc112.cpp)|
+| [lc113 路径总和 II](https://leetcode.cn/problems/path-sum-ii/description/) |[递归+二叉树](Prefix\PathSum专题\lc113.cpp)|
 
 
 ### 9. 基础数据结构
