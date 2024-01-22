@@ -2,13 +2,13 @@
 
 LeetCode 代码和题解集合
 
-### 1. BFS
+## 1. BFS
 
 
-### 2. DFS
+## 2. DFS
 
 
-### 3. BinarySearch
+## 3. BinarySearch
 | 题     | 笔记 |
 | ----------- | ----------- |
 |[lc6929 数组的最大美丽值](https://leetcode.cn/problems/maximum-beauty-of-an-array-after-applying-operation/)|[最大连续子串](binarySearch\lc6929.md)|
@@ -16,12 +16,12 @@ LeetCode 代码和题解集合
 |[lc33](https://leetcode.cn/problems/search-in-rotated-sorted-array/description/?envType=study-plan-v2&envId=top-100-liked)|[非严格递增二分](binarySearch\lc33.cpp)|
 
 
-#### 最大值最小化/最小值最大化问题
+### 最大值最小化/最小值最大化问题
 |题|笔记|
 | ----------- | ----------- |
 |[lc2560 打家劫舍 IV](https://leetcode.cn/problems/house-robber-iv/description/)|[最大值最小化问题+DP](DP\打家劫舍专题\lc2560.cpp)|
 
-### 4. TwoPointers
+## 4. TwoPointers
 | 题     | 笔记 |
 | ----------- | ----------- |
 |[lc6954 统计和小于目标的下标对数目](https://leetcode.cn/problems/count-pairs-whose-sum-is-less-than-target/description/)|[排序+双指针](two_pointers\lc6954.go)|
@@ -30,10 +30,10 @@ LeetCode 代码和题解集合
 |[lc763 划分字母区间](https://leetcode.cn/problems/partition-labels/description/?envType=study-plan-v2&envId=top-100-liked)|[双指针+贪心](two_pointers\lc763.cpp)|
 |[lc11 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/description/?envType=study-plan-v2&envId=top-100-liked)|[双指针](two_pointers\lc11.cpp)|
 
-### 5. BranchBound
+## 5. BranchBound
 
 
-### 6. DP
+## 6. DP
 | 题     | 笔记 |
 | ----------- | ----------- |
 |[lc1911 最大子序列交替和](https://leetcode.cn/problems/maximum-alternating-subsequence-sum/)|[股票买卖问题类型](DP\buy_stocks_time\lc1911.go)|
@@ -57,7 +57,7 @@ LeetCode 代码和题解集合
 |[lc139 单词拆分](https://leetcode.cn/problems/word-break/?envType=study-plan-v2&envId=top-100-liked)|[字符串DP](DP\others\lc139.cpp)|
 |[lc32 最长有效括号](https://leetcode.cn/problems/longest-valid-parentheses/description/?envType=study-plan-v2&envId=top-100-liked)|[括号匹配类DP](DP\匹配问题\括号问题\lc32.cpp)|
 
-#### 打家劫舍专题（力扣）
+### 打家劫舍专题（力扣）
 |题|笔记|
 | ----------- | ----------- |
 |[lc198 打家劫舍 I](打家劫舍)|[DP](DP\打家劫舍专题\lc198.cpp)|
@@ -65,13 +65,13 @@ LeetCode 代码和题解集合
 |[lc337 打家劫舍 III](https://leetcode.cn/problems/house-robber-iii/)|[TreeDP](DP\TreeDp\lc337.cpp)|
 |[lc2560 打家劫舍 IV](https://leetcode.cn/problems/house-robber-iv/description/)|[最大值最小化问题+DP](DP\打家劫舍专题\lc2560.cpp)|
 
-### 7. Graph
+## 7. Graph
 
 
-### 8. Tree
+## 8. Tree
 
 
-#### Binary Tree
+### Binary Tree
 | 题     | 笔记 |
 | ----------- | ----------- |
 | [lc979 在二叉树中分配硬币](https://leetcode.cn/problems/distribute-coins-in-binary-tree/) |[:memo:](Tree\BST\lc979.md)|
@@ -80,16 +80,18 @@ LeetCode 代码和题解集合
 | [lc236 二叉树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/description/?envType=study-plan-v2&envId=top-100-liked) |[二叉树+分类讨论](Tree\BST\lc236.cpp)|
 | [lc98 验证二叉搜索树](https://leetcode.cn/problems/validate-binary-search-tree/?envType=study-plan-v2&envId=top-100-liked) |[BST特性](Tree\BST\lc98.cpp)|
 
-#### PathSum 专题
+### PathSum 专题
+| 题     | 笔记 |
+| ----------- | ----------- |
 | [lc437 路径总和 III](https://leetcode.cn/problems/path-sum-iii/description/?envType=study-plan-v2&envId=top-100-liked) |[前缀和+二叉树](Prefix\PathSum专题\lc437.cpp)|
 | [lc112 路径总和 I](https://leetcode.cn/problems/path-sum/description/) |[递归+二叉树](Prefix\PathSum专题\lc112.cpp)|
 | [lc113 路径总和 II](https://leetcode.cn/problems/path-sum-ii/description/) |[递归+二叉树](Prefix\PathSum专题\lc113.cpp)|
 
 
-### 9. 基础数据结构
+## 9. 基础数据结构
 
 
-### 10. PrefixSum
+## 10. PrefixSum
 | 题     | 笔记 |
 | ----------- | ----------- |
 |[lc560 和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k/)|[前缀和+哈希](Prefix\Prefix_Hash\lc560.cpp)|
@@ -97,29 +99,30 @@ LeetCode 代码和题解集合
 |[lc523 连续的子数组和](https://leetcode.cn/problems/continuous-subarray-sum/)|[前缀和+哈希+取模+长度限制](Prefix\Prefix_Hash\lc523.cpp)|
 |[lc525 连续数组](https://leetcode.cn/problems/contiguous-array/)|[前缀和+哈希+取模](Prefix\Prefix_Hash\lc525.cpp)|
 |[lc2845 统计趣味子数组的数目](https://leetcode.cn/problems/count-of-interesting-subarrays/description/)|[前缀和+哈希+取模](Prefix\Prefix_Hash\lc2845.cpp)|
+| [lc437 路径总和 III](https://leetcode.cn/problems/path-sum-iii/description/?envType=study-plan-v2&envId=top-100-liked) |[前缀和+二叉树](Prefix\PathSum专题\lc437.cpp)|
 
-
-### 11. Sort
+## 11. Sort
 | 题     | 笔记 |
 | ----------- | ----------- |
 |[lc207. 课程表](https://leetcode.cn/problems/course-schedule/description/?envType=daily-question&envId=2023-09-09)|[拓扑排序](Sort\topologicSort\lc207.cpp)|
 |[lc210 课程表 II](https://leetcode.cn/problems/course-schedule-ii/?envType=daily-question&envId=2023-09-10)|[拓扑排序](Sort\topologicSort\lc210.cpp)|
 |[lc1462 课程表 IV](https://leetcode.cn/problems/course-schedule-iv/description/?envType=daily-question&envId=2023-09-12)|[拓扑排序](Sort\topologicSort\lc1462.cpp)|
 
-### 12. BitOperation
+## 12. BitOperation
 
 
-### 13. KMP
+## 13. KMP
 
 
-### 14. Brain Teaser(脑筋急转弯)
+## 14. Brain Teaser(脑筋急转弯)
 | 题     | 笔记 |
 | ----------- | ----------- |
 |[lc9 回文数](https://leetcode.cn/problems/palindrome-number/)|[:memo:](GoodTrick\lc9.md)|
 |[lc2780 合法分割的最小下标](https://leetcode.cn/problems/minimum-index-of-a-valid-split/)|[证明题](GoodTrick\lc2780.md)|
-### 15. Mutithread
 
-### 16. 单调队列
+## 15. Mutithread
+
+## 16. 单调队列
 | 题     | 笔记 |
 | ----------- | ----------- |
 |[lc918 环形子数组的最大和](https://leetcode.cn/problems/maximum-sum-circular-subarray/description/)|[单调递增队列](MonotonicQueue\lc918.md)|
@@ -128,7 +131,7 @@ LeetCode 代码和题解集合
 |[lc1499 满足不等式的最大值](https://leetcode.cn/problems/max-value-of-equation/)|[单调递减队列](MonotonicQueue\lc1499.md)|
 |[lc2831 找出最长等值子数组](https://leetcode.cn/problems/find-the-longest-equal-subarray/description/)|[双端队列](MonotonicQueue\lc2831.md)|
 
-### 17. 高级数据结构
+## 17. 高级数据结构
 | 题     | 笔记 |
 | ----------- | ----------- |
 |[lc2208 将数组和减半的最少操作次数](https://leetcode.cn/problems/minimum-operations-to-halve-array-sum/description/)|[贪心+优先队列](Datastructure\heap_PriorityQueue\lc2208.md)|
@@ -138,26 +141,26 @@ LeetCode 代码和题解集合
 |[lc155 最小栈](https://leetcode.cn/problems/min-stack/description/)|[辅助栈](Datastructure\AssistStack\Patten.cpp)|
 
 
-### 18. 模拟
+## 18. 模拟
 | 题     | 笔记 |
 | ----------- | ----------- |
 |[lc722 删除注释](https://leetcode.cn/problems/remove-comments/description/)|[栈模拟](模拟\lc722.md)|
 |[lc24 两两交换链表中的节点](https://leetcode.cn/problems/swap-nodes-in-pairs/description/)|[链表模拟](模拟\lc24.md)|
 
-### 19. 哈希
+## 19. 哈希
 | 题     | 笔记 |
 | ----------- | ----------- |
 |[lc2834 找出美丽数组的最小和](https://leetcode.cn/problems/find-the-minimum-possible-sum-of-a-beautiful-array/description/)|[哈希+证明](Hash\lc2834.md)|
 |[lc1222 可以攻击国王的皇后](https://leetcode.cn/problems/queens-that-can-attack-the-king/description/?envType=daily-question&envId=2023-09-14)|[哈希](Hash\lc1222.cpp)|
 |[lc49 字母异位词分组](https://leetcode.cn/problems/group-anagrams/?envType=study-plan-v2&envId=top-100-liked)|[哈希+模拟](Hash\lc49.cpp)|
 
-### 20. 贪心
+## 20. 贪心
 | 题     | 笔记 |
 | ----------- | ----------- |
 |[lc1921 消灭怪物的最大数量](https://leetcode.cn/problems/eliminate-maximum-number-of-monsters/?envType=daily-question&envId=2023-09-03)|[贪心+排序](tanxin\lc1921.md)|
 
 
-### 21. 链表
+## 21. 链表
 | 题     | 笔记 |
 | ----------- | ----------- |
 |[lc21 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/description/?envType=study-plan-v2&envId=top-100-liked)|[原地合并链表](Datastructure\LinkedList\lc21.cpp)|
@@ -165,3 +168,16 @@ LeetCode 代码和题解集合
 |[lc19 删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/?envType=study-plan-v2&envId=top-100-liked)|[快慢指针](Datastructure\LinkedList\lc19.cpp)|
 |[lc138 随机链表的复制](https://leetcode.cn/problems/copy-list-with-random-pointer/?envType=study-plan-v2&envId=top-100-liked)|[哈希+链表](Datastructure\LinkedList\lc138.cpp)|
 |[lc148 排序链表](https://leetcode.cn/problems/sort-list/description/?envType=study-plan-v2&envId=top-100-liked)|[快慢指针+归并排序+链表](Datastructure\LinkedList\lc148.cpp)|
+
+
+-----
+# ACWing 算法基础课打卡题
+
+## 1. 基础算法
+题目清单：
+![Alt text](image.png)
+代码：
+[code](acwing)
+
+
+
