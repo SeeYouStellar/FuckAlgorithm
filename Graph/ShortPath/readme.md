@@ -20,7 +20,7 @@ vector<int> graph[];
   **要证明**算法进行到第k步时，在$V-S$集合里，总能找到一点$u$到源点的距离为最小距离$short[u]$（这是一定的，因为集合有界），并且$short[u]$就是$u$到源点的最短距离，即后续的贪心选择不会产生更小的$short[u]$。
   **反证法证明：**
 
-  ![image-20220726181918095](C:\Users\lisherry\AppData\Roaming\Typora\typora-user-images\image-20220726181918095.png)
+  ![image-20220726181918095](image-20220701215712738.png)
 
 ### **Bellman ford**算法：基于**DP**思想
 参考文章：[最短路径之Bellman-Ford算法——动态规划](https://www.cnblogs.com/grandyang/p/4518091.html)

@@ -14,12 +14,13 @@ void dijkstra()
         pq.pop();
         if(vis[u]) continue; // 因为vis数组只是为了记录节点是否已找到最短路径而不是为了记录是否入队，所以注意这种写法会导致多个节点的不同长度路径被记录，当某条记录被弹出后，其余的该节点的记录就都废掉了。
         vis[u] = 1;
-        for(int j = 0; j < n; j++)   // 遍历每个点的每天边，故这部分总复杂度-----O(E)
+        for(int j = 0; j < n; j++)   // 遍历每个点的每条边，故这部分总复杂度-----O(E)
         {
             if(!vis[j] && graph[u][j] && dist[u] + graph[u][j] < dist[j])
             {
                 dist[j] = dist[u] + graph[u][j];
-                pq.push(make_pair(dist[j], j));
+                // pq.push(make_pair(dist[j], j));
+                pq.push({dist[j], j});
             }
         }
     }

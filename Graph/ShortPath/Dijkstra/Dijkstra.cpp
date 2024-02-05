@@ -4,7 +4,10 @@ using namespace std;
 int graph[100][100], dist[100], vis[100], n, src=0, dst=n-1;
 void dijkstra() // 
 {
-    fill(d, d+100, INT_MAX);
+    // ! fill函数和memset函数的区别：
+    // * 1) fill函数填充每一个数组单元
+    // * 2) memset函数填充每一个字节单元 
+    fill(dist, dist+100, INT_MAX);
     dist[src] = 0;
     for(int i = 0; i < n; i++)
     {
@@ -13,7 +16,7 @@ void dijkstra() //
         {
             if(!vis[j] && dist[j] < min)
             {
-                min = dist[j];
+                min = dist[j];  
                 u = j;
             }
         }

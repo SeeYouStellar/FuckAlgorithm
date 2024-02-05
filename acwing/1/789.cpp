@@ -21,7 +21,7 @@ int main() {
     for(int i=0;i<q;i++) {
         scanf("%d", &k);
         int l = lower_bound(0, n-1, k), r;
-        if(a[l]!=k) cout<<"-1 -1"<<endl;
+        if(l>=n && a[l]!=k) cout<<"-1 -1"<<endl;
         else{
             r = lower_bound(0, n-1, k+1)-1;
             cout<<l<<" "<<r<<endl;
