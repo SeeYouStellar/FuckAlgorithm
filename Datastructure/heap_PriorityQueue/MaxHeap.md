@@ -12,28 +12,27 @@
 #include<iostream>
 using namespace std;
 int heap[1000] = {0, 85, 55, 82, 57, 68, 92, 99, 98, 66, 56}, N = 10;
-void downadjust(int i) //O(logn) 和二叉树的搜索是同一个时间复杂度
+void downadjust(int p) //O(logn) 和二叉树的搜索是同一个时间复杂度
 {
-    int j = i*2;
-    while(i <= N){
-        if(j + 1 <= N && heap[j + 1] > heap[j])
-            j = j + 1;
-        if(heap[i] < heap[j]){
-            swap(heap[i], heap[j]);
-            i = j;
-            j = i*2;
-        }else 
-            break;
+    int q = p*2;
+    while(q<=n) {
+        if(q+1<=n && a[q]>a[q+1]) q = q+1;
+        if(a[p]>a[q]){
+            swap(a[p], a[q]);
+            p = q;
+            q = p*2;
+        }else break;
     }
 }
-void upadjust(int i)
+void upadjust(int p)
 {
-    int now = i;
-    while(now >= 1){
-        if(heap[now] > heap[now/2]){
-            swap(heap[now], heap[now/2]);
-            now/=2;
-        }else break;
+    int q = p/2;
+    while(q>0){
+        if(a[p]<a[q]){
+            swap(a[p], a[q]);
+            p = q;
+            q = q/2;
+        } else break;
     }
 }
 void createHeap() //O(n)
